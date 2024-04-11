@@ -21,9 +21,9 @@ class OnBoardingPage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Image.asset("assets/images/on_boarding_images/Online_Delivery_Service.gif"),
+                        Image.asset("assets/images/on_boarding_images/Silesua-onboard-animation.gif", width: 700),
                         Text(
-                          "Your wishlist now within arms reach.",
+                          "Your community, for you and all about you.",
                           style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold
@@ -32,7 +32,7 @@ class OnBoardingPage extends StatelessWidget {
                         ),
                         ElevatedButton(
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 116, 216, 119)),
+                            backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 219, 41, 191)),
                             padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 30, vertical: 10))
                           ),
                           onPressed: (){
@@ -50,10 +50,11 @@ class OnBoardingPage extends StatelessWidget {
                           },
                           child: Text(
                             "Begin Shopping",
-                            style: GoogleFonts.poppins(
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
-                              // color: Colors.white
+                              color: Colors.white
                             )
                           )
                         ),

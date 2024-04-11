@@ -8,7 +8,7 @@ class ContactPage extends StatelessWidget {
 
   static List<ContactsModel> getContacts = [
     ContactsModel(name: 'Police Station', number: '991', image: 'assets/images/EPD.jpg'),
-    ContactsModel(name: 'Women\'s Association', number: '+251952048277', image: 'assets/images/ewass.jpg'),
+    ContactsModel(name: 'Women\'s Association', number: '+251 952 048277', image: 'assets/images/ewass.jpg'),
     ContactsModel(name: 'Legal Consultants', number: '7711', image: 'assets/images/ewla.jpg'),
     ContactsModel(name: 'Health Professionals', number: '8335', image: 'assets/images/medicine.jpg'),
     ContactsModel(name: 'Psychologists', number: '+251 945 565656', image: 'assets/images/psych.jpg'),
