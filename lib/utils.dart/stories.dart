@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Stories extends StatelessWidget {
   final String imgpath;
@@ -14,18 +15,19 @@ class Stories extends StatelessWidget {
     required this.sneekpeak,
     required this.profilepic,
   });
+  //this relation of widgets with attributes in their default construction must be broken!!
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.45,
+    return Expanded(
+      // height: MediaQuery.of(context).size.height * 0.45,
       child: ListView.builder(
         scrollDirection: Axis.vertical,
         itemCount: 5,
         itemBuilder: (context, index) {
-          return SizedBox(
-            width: MediaQuery.of(context).size.width * 0.9,
-            height: MediaQuery.of(context).size.height * 0.18,
+          return Expanded(
+            // width: MediaQuery.of(context).size.width * 0.9,
+            // height: MediaQuery.of(context).size.height * 0.18,
             child: Column(
               children: [
                 Container(
@@ -56,16 +58,18 @@ class Stories extends StatelessWidget {
                           ),
                         ),
                       ),
-
-                      Container(
-                        margin: EdgeInsets.all(8),
-                        width: MediaQuery.of(context).size.width * 0.3,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Text(
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                          softWrap: true,
-                          overflow: TextOverflow.clip,
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.all(8),
+                          width: MediaQuery.of(context).size.width * 0.3,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12)),
+                          child: Text(
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                            softWrap: true,
+                            maxLines: 3,
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
                       ),
                     ],

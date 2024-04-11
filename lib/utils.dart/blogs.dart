@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Blogs extends StatelessWidget {
   final String imgpath;
@@ -54,15 +55,20 @@ class Blogs extends StatelessWidget {
                         width: 10,
                       ),
                       //text container
-                      Container(
-                        margin: EdgeInsets.all(8),
-                        width: MediaQuery.of(context).size.width * 0.3,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Text(
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                          softWrap: true,
-                          overflow: TextOverflow.clip,
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.all(8),
+                          // width: MediaQuery.of(context).size.width * 0.3,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12)),
+                          child: Expanded(
+                            child: Text(
+                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                              softWrap: true,
+                              maxLines: 4,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
                         ),
                       ),
                     ],

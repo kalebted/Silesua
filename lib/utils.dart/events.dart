@@ -9,15 +9,15 @@ class Events extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        height: MediaQuery.of(context).size.height * 0.45,
-        width: MediaQuery.of(context).size.width * 0.90,
+    return Expanded(
+        // height: MediaQuery.of(context).size.height * 0.45,
+        // width: MediaQuery.of(context).size.width * 0.90,
         child: ListView.builder(
           itemCount: 5,
           itemBuilder: ((context, index) {
-            return SizedBox(
-              height: MediaQuery.of(context).size.height * 0.17,
-              width: MediaQuery.of(context).size.width * 0.95,
+            return Expanded(
+              // height: MediaQuery.of(context).size.height * 0.17,
+              // width: MediaQuery.of(context).size.width * 0.95,
               child: Column(
                 children: [
                   ClipRRect(

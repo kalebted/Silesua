@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -16,6 +18,13 @@ class _CarouselSliderAnimationState extends State<CarouselSliderAnimation> {
     'https://www.fanabc.com/english/wp-content/uploads/2023/09/Abeba-Berhane-450x300.png',
     'https://images.csmonitor.com/csm/2019/05/0520%20DDP%20ETHLADIES.jpg?alias=standard_900x600',
     'https://www.fanabc.com/english/wp-content/uploads/2023/04/photo_2023-04-27_16-48-37.jpg',
+  ];
+
+  final List<String> carousel_img = [
+    'assets/images/Sahle-Work-Zewde.png',
+    'assets/images/Abeba-Berhane.png',
+    'assets/images/Derartu-Tulu.jpg',
+    'assets/images/Meaza_Ashenafi.jpg'
   ];
 
   @override
@@ -37,7 +46,26 @@ class _CarouselSliderAnimationState extends State<CarouselSliderAnimation> {
               });
             },
           ),
-          items: biographies.map((String url) {
+          // items: biographies.map((String url) {
+          //   return ClipRRect(
+          //     borderRadius: const BorderRadius.all(Radius.circular(20)),
+          //     child: Container(
+          //       width: double.infinity,
+          //       decoration: BoxDecoration(
+          //           borderRadius: const BorderRadius.all(Radius.circular(20)),
+          //           color: Colors.blueGrey,
+          //           image: DecorationImage(
+          //               image: NetworkImage(url), fit: BoxFit.cover)),
+          //     ),
+          //   );
+          // }).toList(),
+          // items: [
+          //   Image.asset('assets/images/Sahle-Work-Zewde.png'),
+          //   Image.asset('assets/images/Abeba-Berhane.png'),
+          //   Image.asset('assets/images/Derartu-Tulu.jpg'),
+          //   Image.asset('assets/images/Meaza_Ashenafi.jpg'),
+          // ],
+          items: carousel_img.map((String url) {
             return ClipRRect(
               borderRadius: const BorderRadius.all(Radius.circular(20)),
               child: Container(
@@ -46,7 +74,7 @@ class _CarouselSliderAnimationState extends State<CarouselSliderAnimation> {
                     borderRadius: const BorderRadius.all(Radius.circular(20)),
                     color: Colors.blueGrey,
                     image: DecorationImage(
-                        image: NetworkImage(url), fit: BoxFit.cover)),
+                      image: AssetImage(url), fit: BoxFit.cover)),
               ),
             );
           }).toList(),
@@ -54,8 +82,8 @@ class _CarouselSliderAnimationState extends State<CarouselSliderAnimation> {
         const SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: biographies.map((url) {
-            int index = biographies.indexOf(url);
+          children: carousel_img.map((url) {
+            int index = carousel_img.indexOf(url);
             return Container(
               width: 8.0,
               height: 8.0,

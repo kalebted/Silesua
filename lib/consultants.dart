@@ -13,7 +13,7 @@ class Consultants extends StatefulWidget {
 
 class _ConsultantsState extends State<Consultants> {
   static List<Consultant> consultants_on_call = [
-    Consultant('Dr. Mulu Mekonnen', 'Psychiatrist', 'contact', 'assets/images/lydia.jpg'),
+    Consultant('Dr. Mulu Mkonnen', 'Psychiatrist', 'contact', 'assets/images/Mulu-Mkonnen.jpg'),
     Consultant('Dr. Lidya Solomon', 'Psychiatrist', 'contact', 'assets/images/lydia.jpg'),
     Consultant('Dr. Tigist Waltenigus', 'Psychiatrist', 'contact', 'assets/images/tigist.jpg'),
     // Consultant('Dr. Mulu Mekonnen', 'Psychiatrist', 'contact', 'assets/images/lydia.jpg'),
