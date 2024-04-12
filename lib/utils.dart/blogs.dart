@@ -4,10 +4,33 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Blogs extends StatelessWidget {
-  final String imgpath;
-  final String blogsneakpeek;
+  // final String imgpath;
+  // final String blogsneakpeek;
 
-  const Blogs({super.key, required this.imgpath, required this.blogsneakpeek});
+  Blogs({
+    super.key,
+    // required this.imgpath,
+    // required this.blogsneakpeek
+  });
+
+  final List<Blogmodel> blogs = [
+    Blogmodel(
+      imgpath: 'assets/images/Sahle-Work-Zewde.png',
+      blogsneakpeek: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies nunc. Nulla facilisi. Nullam nec nunc nec nunc.',
+    ),
+    Blogmodel(
+      imgpath: 'assets/images/Sahle-Work-Zewde.png',
+      blogsneakpeek: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies nunc. Nulla facilisi. Nullam nec nunc nec nunc.',
+    ),
+    Blogmodel(
+      imgpath: 'assets/images/Sahle-Work-Zewde.png',
+      blogsneakpeek: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies nunc. Nulla facilisi. Nullam nec nunc nec nunc.',
+    ),
+    Blogmodel(
+      imgpath: 'assets/images/Sahle-Work-Zewde.png',
+      blogsneakpeek: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies nunc. Nulla facilisi. Nullam nec nunc nec nunc.',
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +41,7 @@ class Blogs extends StatelessWidget {
         itemCount: 4,
         itemBuilder: (context, index) {
           return Container(
-            decoration:
-                BoxDecoration(borderRadius: BorderRadius.circular(12)),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
             height: MediaQuery.of(context).size.height * 0.17,
             width: MediaQuery.of(context).size.width * 0.95,
             child: Column(
@@ -45,8 +67,8 @@ class Blogs extends StatelessWidget {
                                   topRight: Radius.circular(20),
                                   bottomRight: Radius.circular(20)),
                               color: Colors.pink.shade50),
-                          child: Image.network(
-                            imgpath,
+                          child: Image.asset(
+                            blogs[index].imgpath,
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -63,7 +85,7 @@ class Blogs extends StatelessWidget {
                               borderRadius: BorderRadius.circular(12)),
                           child: Expanded(
                             child: Text(
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                              blogs[index].blogsneakpeek,
                               softWrap: true,
                               maxLines: 4,
                               overflow: TextOverflow.ellipsis,

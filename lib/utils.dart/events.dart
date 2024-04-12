@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Events extends StatelessWidget {
-  final String imgpath;
-  const Events({
-    super.key,
-    required this.imgpath,
-  });
+  // final String imgpath;
+  const Events({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +20,8 @@ class Events extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(15),
                     child: Container(
-                      height: MediaQuery.of(context).size.height * 0.15,
-                      width: MediaQuery.of(context).size.width * 0.95,
+                      height: 140,
+                      width: 380,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.pink.shade50),
@@ -34,9 +31,9 @@ class Events extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // SizedBox(
-                  //   height: 5,
-                  // )
+                  const SizedBox(
+                    height: 10,
+                  )
                 ],
               ),
             );

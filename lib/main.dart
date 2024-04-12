@@ -82,9 +82,11 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ],
       ),
-      body: IndexedStack(
-        index: myIndex,
-        children: widgetList,
+      body: SafeArea(
+        child: IndexedStack(
+          index: myIndex,
+          children: widgetList,
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Colors.black,

@@ -6,7 +6,7 @@ import 'package:capstone_a/utils.dart/biographies.dart';
 import 'package:capstone_a/utils.dart/blogs.dart';
 import 'package:capstone_a/utils.dart/events.dart';
 import 'package:capstone_a/utils.dart/searchbar.dart';
-import 'package:capstone_a/utils.dart/stories.dart';
+import 'package:capstone_a/utils.dart/stories_tab.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,24 +17,24 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   
-  final List<Biomodel> biographies = [
-    Biomodel(
-        imgpath:
-            'https://www.itu.int/en/ITU-D/Conferences/WTDC/WTDC21/R2A/PublishingImages/partner2connect/Sahle-Work-Zewde.png',
-        name: 'President SahleWork Zewdie'),
-    Biomodel(
-        imgpath:
-            'https://www.fanabc.com/english/wp-content/uploads/2023/09/Abeba-Berhane-450x300.png',
-        name: 'Scientist Abeba irhane'),
-    Biomodel(
-        imgpath:
-            'https://images.csmonitor.com/csm/2019/05/0520%20DDP%20ETHLADIES.jpg?alias=standard_900x600',
-        name: 'Meaza Ashenafi'),
-    Biomodel(
-        imgpath:
-            'https://www.fanabc.com/english/wp-content/uploads/2023/04/photo_2023-04-27_16-48-37.jpg',
-        name: 'Derartu Tulu'),
-  ];
+  // final List<Biomodel> biographies = [
+  //   Biomodel(
+  //       imgpath:
+  //           'https://www.itu.int/en/ITU-D/Conferences/WTDC/WTDC21/R2A/PublishingImages/partner2connect/Sahle-Work-Zewde.png',
+  //       name: 'President SahleWork Zewdie'),
+  //   Biomodel(
+  //       imgpath:
+  //           'https://www.fanabc.com/english/wp-content/uploads/2023/09/Abeba-Berhane-450x300.png',
+  //       name: 'Scientist Abeba irhane'),
+  //   Biomodel(
+  //       imgpath:
+  //           'https://images.csmonitor.com/csm/2019/05/0520%20DDP%20ETHLADIES.jpg?alias=standard_900x600',
+  //       name: 'Meaza Ashenafi'),
+  //   Biomodel(
+  //       imgpath:
+  //           'https://www.fanabc.com/english/wp-content/uploads/2023/04/photo_2023-04-27_16-48-37.jpg',
+  //       name: 'Derartu Tulu'),
+  // ];
   // int _currentindex = 0;
 
   @override
@@ -74,21 +74,21 @@ class _HomePageState extends State<HomePage> {
                   height: MediaQuery.of(context).size.height * 0.5,
                   child: TabBarView(children: [
                     Stories(
-                      imgpath: biographies[0].imgpath,
-                      name: biographies[0].name,
-                      profilepic: biographies[0].imgpath,
-                      sneekpeak: 'some description',
+                      // imgpath: biographies[0].imgpath,
+                      // name: biographies[0].name,
+                      // profilepic: biographies[0].imgpath,
+                      // sneekpeak: 'some description',
                     ),
                     Blogs(
-                      imgpath: biographies[0].imgpath,
-                      blogsneakpeek: 'some description',
+                      // imgpath: biographies[0].imgpath,
+                      // blogsneakpeek: 'some description',
                     ),
                     Events(
-                      imgpath: biographies[0].imgpath,
+                      // imgpath: biographies[0].imgpath,
                     ),
                     Biographies(
-                      imgpath: biographies[0].imgpath,
-                      name: biographies[0].name,
+                      // imgpath: biographies[0].imgpath,
+                      // name: biographies[0].name,
                     ),
                   ]),
                 ),
