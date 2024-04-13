@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                       labelPadding: EdgeInsets.only(left: 10, right: 20),
                       tabs: [
                         Tab(text: 'Stories'),
-                        Tab(text: 'Blog'),
+                        Tab(text: 'Blogs'),
                         Tab(text: 'Events'),
                         Tab(text: 'Biographies'),
                       ]),

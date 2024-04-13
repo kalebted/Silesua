@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 
 class Events extends StatelessWidget {
   // final String imgpath;
-  const Events({super.key});
+  Events({super.key});
+
+  final List<String> events = [
+    'assets/images/event1.jpg',
+    'assets/images/event2.jpg',
+    'assets/images/event3.jpg',
+    'assets/images/event4.jpg'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +17,7 @@ class Events extends StatelessWidget {
         // height: MediaQuery.of(context).size.height * 0.45,
         // width: MediaQuery.of(context).size.width * 0.90,
         child: ListView.builder(
-          itemCount: 5,
+          itemCount: events.length,
           itemBuilder: ((context, index) {
             return Expanded(
               // height: MediaQuery.of(context).size.height * 0.17,
@@ -20,13 +27,13 @@ class Events extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(15),
                     child: Container(
-                      height: 140,
+                      height: 200,
                       width: 380,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.pink.shade50),
-                      child: Image.network(
-                        'https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.jpg?s=612x612&w=0&k=20&c=8ssXDNTp1XAPan8Bg6mJRwG7EXHshFO5o0v9SIj96nY=',
+                      child: Image.asset(
+                        events[index],
                         fit: BoxFit.cover,
                       ),
                     ),

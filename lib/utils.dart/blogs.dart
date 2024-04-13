@@ -15,20 +15,20 @@ class Blogs extends StatelessWidget {
 
   final List<Blogmodel> blogs = [
     Blogmodel(
-      imgpath: 'assets/images/Sahle-Work-Zewde.png',
-      blogsneakpeek: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies nunc. Nulla facilisi. Nullam nec nunc nec nunc.',
+      imgpath: 'assets/images/joanna_goddard.jpg',
+      blogsneakpeek: 'A daily blog written by Joanna Goddard, a magazine writer who lives in New York City.',
     ),
     Blogmodel(
-      imgpath: 'assets/images/Sahle-Work-Zewde.png',
-      blogsneakpeek: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies nunc. Nulla facilisi. Nullam nec nunc nec nunc.',
+      imgpath: 'assets/images/everygirl.jpg',
+      blogsneakpeek: 'The Everygirl is the ultimate online resource helping shape the creative, career-driven woman to experience her life better lived.',
     ),
     Blogmodel(
-      imgpath: 'assets/images/Sahle-Work-Zewde.png',
-      blogsneakpeek: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies nunc. Nulla facilisi. Nullam nec nunc nec nunc.',
+      imgpath: 'assets/images/blondeabroad.jpg',
+      blogsneakpeek: 'The Blonde Abroad is an award-winning solo female travel & lifestyle blog featuring travel tips, packing guides, budget tips, fashion, festivals, and more.',
     ),
     Blogmodel(
-      imgpath: 'assets/images/Sahle-Work-Zewde.png',
-      blogsneakpeek: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies nunc. Nulla facilisi. Nullam nec nunc nec nunc.',
+      imgpath: 'assets/images/sixtyandme.jpg',
+      blogsneakpeek: 'Sixty and Me is an online magazine about life after 60. Topics range from makeup for older women and senior dating to retirement advice and more.',
     ),
   ];
 
@@ -49,7 +49,7 @@ class Blogs extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
-                    color: Colors.pink.shade50,
+                    color: Color.fromARGB(255, 233, 215, 232),
                   ),
                   height: MediaQuery.of(context).size.height * 0.15,
                   width: MediaQuery.of(context).size.width * 0.95,
@@ -66,7 +66,7 @@ class Blogs extends StatelessWidget {
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(20),
                                   bottomRight: Radius.circular(20)),
-                              color: Colors.pink.shade50),
+                              color: Color.fromARGB(255, 252, 223, 250)),
                           child: Image.asset(
                             blogs[index].imgpath,
                             fit: BoxFit.cover,

@@ -46,7 +46,7 @@ class ContactPage extends StatelessWidget {
                 return Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color.fromARGB(255, 255, 210, 248),
+                    color: Color.fromARGB(255, 233, 215, 232),
                   ),
                   height: 100,
                   padding: EdgeInsets.all(15),
@@ -81,7 +81,7 @@ class ContactPage extends StatelessWidget {
                                 }
                               },
                               child: Text(
-                                displayList[index].number!,
+                                'Contact',
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
                                   fontSize: 18,

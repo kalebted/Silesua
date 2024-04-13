@@ -49,7 +49,7 @@ class OnBoardingPage extends StatelessWidget {
                             // MainScreen();
                           },
                           child: Text(
-                            "Begin Shopping",
+                            "Proceed",
                             style: TextStyle(
                               fontFamily: 'Poppins',
                               fontSize: 15,

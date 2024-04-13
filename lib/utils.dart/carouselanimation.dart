@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -13,18 +13,18 @@ class CarouselSliderAnimation extends StatefulWidget {
 
 class _CarouselSliderAnimationState extends State<CarouselSliderAnimation> {
   int _currentIndex = 0;
-  final List<String> biographies = [
-    'https://www.itu.int/en/ITU-D/Conferences/WTDC/WTDC21/R2A/PublishingImages/partner2connect/Sahle-Work-Zewde.png',
-    'https://www.fanabc.com/english/wp-content/uploads/2023/09/Abeba-Berhane-450x300.png',
-    'https://images.csmonitor.com/csm/2019/05/0520%20DDP%20ETHLADIES.jpg?alias=standard_900x600',
-    'https://www.fanabc.com/english/wp-content/uploads/2023/04/photo_2023-04-27_16-48-37.jpg',
-  ];
+  // final List<String> biographies = [
+  //   'https://www.itu.int/en/ITU-D/Conferences/WTDC/WTDC21/R2A/PublishingImages/partner2connect/Sahle-Work-Zewde.png',
+  //   'https://www.fanabc.com/english/wp-content/uploads/2023/09/Abeba-Berhane-450x300.png',
+  //   'https://images.csmonitor.com/csm/2019/05/0520%20DDP%20ETHLADIES.jpg?alias=standard_900x600',
+  //   'https://www.fanabc.com/english/wp-content/uploads/2023/04/photo_2023-04-27_16-48-37.jpg',
+  // ];
 
   final List<String> carousel_img = [
-    'assets/images/Sahle-Work-Zewde.png',
-    'assets/images/Abeba-Berhane.png',
-    'assets/images/Derartu-Tulu.jpg',
-    'assets/images/Meaza_Ashenafi.jpg'
+    'assets/images/mita.webp',
+    'assets/images/womenMH.webp',
+    'assets/images/waisa_1.webp',
+    'assets/images/ethiowoman.jpg'
   ];
 
   @override
@@ -46,35 +46,19 @@ class _CarouselSliderAnimationState extends State<CarouselSliderAnimation> {
               });
             },
           ),
-          // items: biographies.map((String url) {
-          //   return ClipRRect(
-          //     borderRadius: const BorderRadius.all(Radius.circular(20)),
-          //     child: Container(
-          //       width: double.infinity,
-          //       decoration: BoxDecoration(
-          //           borderRadius: const BorderRadius.all(Radius.circular(20)),
-          //           color: Colors.blueGrey,
-          //           image: DecorationImage(
-          //               image: NetworkImage(url), fit: BoxFit.cover)),
-          //     ),
-          //   );
-          // }).toList(),
-          // items: [
-          //   Image.asset('assets/images/Sahle-Work-Zewde.png'),
-          //   Image.asset('assets/images/Abeba-Berhane.png'),
-          //   Image.asset('assets/images/Derartu-Tulu.jpg'),
-          //   Image.asset('assets/images/Meaza_Ashenafi.jpg'),
-          // ],
           items: carousel_img.map((String url) {
-            return ClipRRect(
-              borderRadius: const BorderRadius.all(Radius.circular(20)),
+            return Expanded(
+              // borderRadius: const BorderRadius.all(Radius.circular(20)),
               child: Container(
-                width: double.infinity,
+                width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(20)),
-                    color: Colors.blueGrey,
-                    image: DecorationImage(
-                      image: AssetImage(url), fit: BoxFit.cover)),
+                  borderRadius: const BorderRadius.all(Radius.circular(20)),
+                  color: Colors.blueGrey,
+                  image: DecorationImage(
+                    image: AssetImage(url), fit: BoxFit.cover,
+                  ),
+                ),
+                // child: Image.asset(url, fit: BoxFit.cover),
               ),
             );
           }).toList(),
@@ -85,10 +69,10 @@ class _CarouselSliderAnimationState extends State<CarouselSliderAnimation> {
           children: carousel_img.map((url) {
             int index = carousel_img.indexOf(url);
             return Container(
-              width: 8.0,
+              width: 12.0,
               height: 8.0,
               margin:
-                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: _currentIndex == index

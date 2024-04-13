@@ -65,7 +65,7 @@ class _ConsultantsState extends State<Consultants> {
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Color.fromARGB(255, 248, 224, 244),
+                      color: Color.fromARGB(255, 252, 223, 250),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
